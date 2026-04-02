@@ -26,29 +26,7 @@ body {
   margin: 0;
   background-color: var(--bg);
 }
-/* Mobile fixes */
-@media (max-width: 768px) {
-  .crutch-bg {
-    display: none !important;
-  }
-  
-  body {
-    padding-top: 70px;   /* This prevents content from being cut off by the fixed nav */
-  }
-  
-  nav {
-    padding: 12px 0;
-  }
-  
-  .nav-inner {
-    padding: 0 16px;
-  }
-  
-  .page {
-    padding: 20px;
-  }
-}
-  
+
 /* CRUTCH: fixed div, JS moves it for parallax */
 .crutch-bg {
   position: fixed;
@@ -71,23 +49,15 @@ nav, .page, .lifestyle-section { position: relative; z-index: 1; }
 
 /* NAV */
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 300;
-  background: rgba(247,246,243,0.98);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+  background: rgba(247,246,243,0.96);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--mid-gray);
 }
-
 .nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-width: 860px; margin: 0 auto;
+  padding: 16px 40px;
+  display: flex; align-items: center; justify-content: space-between;
 }
 nav img.logo { height: 26px; filter: brightness(0) saturate(100%) invert(40%) sepia(60%) saturate(500%) hue-rotate(165deg) brightness(90%); }
 .nav-links { display: flex; gap: 24px; align-items: center; }
