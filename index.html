@@ -155,7 +155,7 @@ h1 span { color: var(--accent); }
 .footer img { height: 20px; filter: brightness(0) saturate(100%) invert(40%) sepia(60%) saturate(500%) hue-rotate(165deg) brightness(90%); }
 .footer p { font-size: 11px; color: var(--gray); letter-spacing: 0.04em; }
 
-/* MOBILE FIXES - Stronger override */
+/* MOBILE FIXES - Strong override for nav overflow */
 @media (max-width: 768px) {
   .crutch-bg {
     display: none !important;
@@ -168,15 +168,22 @@ h1 span { color: var(--accent); }
   .nav-inner {
     max-width: 100% !important;
     padding: 12px 16px !important;
-    gap: 12px;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
   }
   
   .nav-links {
     gap: 12px !important;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
   
   nav a {
+    font-size: 13px !important;
+    white-space: nowrap !important;
+  }
+  
+  .nav-cta {
+    padding: 8px 16px !important;
     font-size: 13px !important;
   }
   
