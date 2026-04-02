@@ -152,14 +152,48 @@ h1 span { color: var(--accent); }
 .footer img { height: 20px; filter: brightness(0) saturate(100%) invert(40%) sepia(60%) saturate(500%) hue-rotate(165deg) brightness(90%); }
 .footer p { font-size: 11px; color: var(--gray); letter-spacing: 0.04em; }
 
+/* MOBILE FIXES */
 @media (max-width: 768px) {
-  .crutch-bg { display: none; }
-  .nav-inner, .page { max-width: 100%; padding-left: 20px; padding-right: 20px; }
-  .problem-grid, .lifestyle-quotes { grid-template-columns: 1fr; }
-  .lifestyle-section { margin: 40px -20px 0; }
-  .lifestyle-img { height: 560px; }
-  .lifestyle-overlay { padding: 32px 24px; }
-  .footer { margin: 40px -20px 0; padding: 24px 20px; flex-direction: column; gap: 10px; text-align: center; }
+  .crutch-bg {
+    display: none !important;
+  }
+  
+  body {
+    padding-top: 70px;   /* This prevents the nav from cutting off content */
+  }
+  
+  .nav-inner {
+    padding: 12px 16px;
+  }
+  
+  .page {
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .problem-grid, .lifestyle-quotes {
+    grid-template-columns: 1fr;
+  }
+  
+  .lifestyle-section {
+    margin: 40px -20px 0;
+  }
+  
+  .lifestyle-img {
+    height: 560px;
+  }
+  
+  .lifestyle-overlay {
+    padding: 32px 24px;
+  }
+  
+  .footer {
+    margin: 40px -20px 0;
+    padding: 24px 20px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -186,10 +220,12 @@ h1 span { color: var(--accent); }
     <h1>Finally, crutches<br>that <span>don't hurt.</span></h1>
     <p class="hero-body">Three simple accessories that transform standard crutches into something you can actually live with — less pain, less impact, more freedom.</p>
     <div class="badges">
-      <span class="badge">🏷 Patents Pending</span>
-      <span class="badge">🛒 Coming Soon to Amazon</span>
-      <span class="badge">✓ PT Endorsed</span>
-    </div>
+  <span class="badge">🏷 Patents Pending</span>
+  <a href="https://www.amazon.com/dp/B0GNVV2ZJ6" target="_blank" rel="noopener" class="badge" style="background: #FF9900; color: white; border: none; text-decoration: none;">
+    🛒 Buy on Amazon
+  </a>
+  <span class="badge">✓ PT Endorsed</span>
+</div>
     <div class="ctas">
       <a href="#wholesale" class="btn">Wholesale Inquiries</a>
       <a href="#products" class="btn-ghost">See the products ↓</a>
