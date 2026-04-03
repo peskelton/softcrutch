@@ -235,8 +235,8 @@ h1 span { color: var(--accent); }
 
 <div class="page">
 
-<!-- FULL BLEED HERO - Simple & Reliable -->
-<div id="hero" style="position: relative; min-height: 680px; background: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url('hero.png') center/cover no-repeat; display: flex; align-items: center; margin-left: -40px; margin-right: -40px;">
+<!-- FULL BLEED HERO - Breaks out of container -->
+<div id="hero" style="position: relative; min-height: 680px; background: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url('hero.png') center/cover no-repeat; display: flex; align-items: center; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%);">
   <div style="max-width: 860px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 2; color: white; width: 100%;">
     
     <div class="hero-tag" style="background: rgba(255,255,255,0.95); color: var(--accent);">✦ Crutch Comfort, Reinvented</div>
@@ -255,6 +255,14 @@ h1 span { color: var(--accent); }
        style="display: inline-flex; align-items: center; gap: 8px; background: #FF9900; color: white; font-size: 16px; font-weight: 700; padding: 13px 30px; border-radius: 100px; text-decoration: none;">
       🛒 Buy on Amazon Now
     </a>
+  </div>
+</div>
+
+  <!-- Badges below hero -->
+<div style="max-width: 860px; margin: 0 auto; padding: 0 40px; margin-top: 40px; text-align: center;">
+  <div class="badges" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+    <span class="badge" style="background: rgba(255,255,255,0.95); color: var(--text);">🏷 Patents Pending</span>
+    <span class="badge" style="background: rgba(255,255,255,0.95); color: var(--text);">✓ PT Endorsed</span>
   </div>
 </div>
 
