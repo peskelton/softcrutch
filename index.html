@@ -403,12 +403,13 @@ h1 span { color: var(--accent); }
     if (!crutch) return;
     
     const scrollY = window.scrollY;
-    const maxScroll = document.body.scrollHeight - window.innerHeight;
     
-    // Faster movement tuned to finish near the three accessory tiles
-    const scrollProgress = maxScroll > 0 ? Math.min(scrollY / (maxScroll * 0.48), 1) : 0;
+    // Better calculation: use a larger portion of the total page height
+    const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollProgress = totalScrollable > 0 ? Math.min(scrollY / (totalScrollable * 0.75), 1) : 0;
     
-    const offset = scrollProgress * -380;   // Controls how far it moves vertically
+    // Movement distance - tuned so it finishes revealing around the product section
+    const offset = scrollProgress * -520;
     
     crutch.style.transform = `translateY(${offset}px)`;
   }
@@ -424,7 +425,9 @@ h1 span { color: var(--accent); }
     }
   });
 
+  // Run on load and resize
   window.addEventListener('load', updateParallax);
+  window.addEventListener('resize', updateParallax);
   updateParallax();
 </script>
 </body>
