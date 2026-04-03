@@ -406,7 +406,7 @@ h1 span { color: var(--accent); }
     
     // Simple, consistent movement: the crutch moves up as you scroll down
     // Adjust the divisor (currently 1.8) to control speed
-    const offset = -scrollY / 1.4;
+    const offset = -scrollY / 1.0;
     
     crutch.style.transform = `translateY(${offset}px)`;
   }
