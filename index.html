@@ -403,13 +403,13 @@ h1 span { color: var(--accent); }
     if (!crutch) return;
     
     const scrollY = window.scrollY;
-    
-    // Better calculation: use a larger portion of the total page height
     const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollProgress = totalScrollable > 0 ? Math.min(scrollY / (totalScrollable * 0.75), 1) : 0;
     
-    // Movement distance - tuned so it finishes revealing around the product section
-    const offset = scrollProgress * -520;
+    // Longer movement: uses 85% of the scrollable height so the full crutch reveals
+    const scrollProgress = totalScrollable > 0 ? Math.min(scrollY / (totalScrollable * 0.85), 1) : 0;
+    
+    // Increased travel distance so the entire crutch becomes visible
+    const offset = scrollProgress * -680;
     
     crutch.style.transform = `translateY(${offset}px)`;
   }
@@ -425,7 +425,6 @@ h1 span { color: var(--accent); }
     }
   });
 
-  // Run on load and resize
   window.addEventListener('load', updateParallax);
   window.addEventListener('resize', updateParallax);
   updateParallax();
