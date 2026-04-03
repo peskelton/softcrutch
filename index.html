@@ -333,17 +333,25 @@ h1 span { color: var(--accent); }
 
 </div>
 
-<!-- LIFESTYLE: full width, quotes overlaid -->
+<!-- LIFESTYLE: full width, quotes overlaid - centered -->
 <div class="lifestyle-section" id="testimonials">
-  <img src="Sidelines.png" alt="Man on sidelines at scoccer match" class="lifestyle-img">
-  <div class="lifestyle-overlay">
-    <div class="lifestyle-headline">The game doesn't stop.<br>Neither should you.</div>
-    <div class="lifestyle-quotes">
+  <img src="Sidelines.png" alt="Man on sidelines at soccer match" class="lifestyle-img">
+  <div class="lifestyle-overlay" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 48px 40px;">
+    
+    <div class="lifestyle-headline" style="text-align: center;">The game doesn't stop.<br>Neither should you.</div>
+    
+    <div class="lifestyle-quotes" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 820px; width: 100%;">
       <div class="lq-card">
         <div class="lq-stars"><span class="lq-star">★</span><span class="lq-star">★</span><span class="lq-star">★</span><span class="lq-star">★</span><span class="lq-star">★</span></div>
         <div class="lq-text">"I tried the SoftCrutch armpit pads and they were noticeably more comfortable than the stock pads. I especially appreciated the wider crutch tips for better stability on hills and uneven terrain."</div>
         <div class="lq-author">Reece</div>
         <div class="lq-role">Prosthetics Professional</div>
+      </div>
+      <div class="lq-card">
+        <div class="lq-stars"><span class="lq-star">★</span><span class="lq-star">★</span><span class="lq-star">★</span><span class="lq-star">★</span><span class="lq-star">★</span></div>
+        <div class="lq-text">"SoftCrutch enhances safety, comfort, and function in crutch-assisted mobility by reducing underarm chafing, hand/wrist pain, axillary nerve impingement, and fall risk while promoting better alignment, gait, and lower energy expenditure."</div>
+        <div class="lq-author">Rachael Thurman, DPT, CAFS, PCES</div>
+        <div class="lq-role">Doctor of Physical Therapy</div>
       </div>
     </div>
   </div>
