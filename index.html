@@ -405,11 +405,10 @@ h1 span { color: var(--accent); }
     const scrollY = window.scrollY;
     const maxScroll = document.body.scrollHeight - window.innerHeight;
     
-    // Slower, smoother movement — finishes revealing around the product tiles
-    const scrollProgress = maxScroll > 0 ? Math.min(scrollY / (maxScroll * 0.65), 1) : 0;
+    // Faster movement tuned to finish near the three accessory tiles
+    const scrollProgress = maxScroll > 0 ? Math.min(scrollY / (maxScroll * 0.48), 1) : 0;
     
-    // Adjust these numbers to control how much the crutch moves and when it finishes
-    const offset = scrollProgress * -280;   // Negative = moves up as you scroll down
+    const offset = scrollProgress * -380;   // Controls how far it moves vertically
     
     crutch.style.transform = `translateY(${offset}px)`;
   }
@@ -425,7 +424,6 @@ h1 span { color: var(--accent); }
     }
   });
 
-  // Initial call
   window.addEventListener('load', updateParallax);
   updateParallax();
 </script>
