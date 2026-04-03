@@ -216,11 +216,128 @@ h1 span { color: var(--accent); }
     text-align: center;
   }
 }
+
+/* HERO BANNER */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  min-height: 520px;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  filter: brightness(0.72);
+}
+.hero-banner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.58) 0%,
+    rgba(0,0,0,0.28) 55%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+.hero-banner-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 40px 52px;
+}
+.hero-banner-eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(58,125,158,0.82); color: #fff;
+  font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 100px;
+  margin-bottom: 14px; width: fit-content;
+  backdrop-filter: blur(4px);
+}
+.hero-banner-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(36px, 6vw, 68px); font-weight: 800;
+  line-height: 1.05; letter-spacing: -0.03em;
+  color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.45);
+  margin-bottom: 12px;
+}
+.hero-banner-title span { color: #8ed4ed; }
+.hero-banner-sub {
+  font-size: 16px; line-height: 1.75;
+  color: rgba(255,255,255,0.82); font-weight: 300;
+  max-width: 480px; text-shadow: 0 1px 8px rgba(0,0,0,0.35);
+  margin-bottom: 24px;
+}
+.hero-banner-badges {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;
+}
+.hero-banner-badge {
+  font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 700;
+  background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9);
+  padding: 5px 12px; border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(4px);
+}
+.hero-banner-badge-amazon {
+  font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 700;
+  background: rgba(255,153,0,0.85); color: #fff;
+  padding: 5px 12px; border-radius: 100px;
+  border: 1px solid rgba(255,153,0,0.5);
+  text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+  backdrop-filter: blur(4px);
+}
+.hero-banner-ctas { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.hero-banner-btn {
+  background: var(--accent); color: #fff;
+  padding: 12px 26px; font-size: 14px;
+  font-family: 'Nunito', sans-serif; font-weight: 700;
+  text-decoration: none; border-radius: 100px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: background 0.2s, transform 0.15s; display: inline-block;
+}
+.hero-banner-btn:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.hero-banner-ghost {
+  color: rgba(255,255,255,0.82); font-size: 14px;
+  font-family: 'Nunito', sans-serif; font-weight: 600;
+  text-decoration: none; transition: color 0.2s;
+}
+.hero-banner-ghost:hover { color: #fff; }
+@media (max-width: 768px) {
+  .hero-banner { height: 75vh; }
+  .hero-banner-content { padding: 0 20px 36px; }
+}
 </style>
 </head>
 <body>
 
 <div class="crutch-bg"><img src="crutch.png" alt=""></div>
+
+<!-- HERO BANNER -->
+<div class="hero-banner">
+  <img src="hero.png" alt="Mother walking with children using SoftCrutch" class="hero-banner-img">
+  <div class="hero-banner-content">
+    <div class="hero-banner-eyebrow">✦ Crutch Comfort, Reinvented</div>
+    <h1 class="hero-banner-title">Keep living.<br>Keep <span>moving.</span></h1>
+    <p class="hero-banner-sub">Three simple accessories that eliminate the pain and frustration of standard crutches — so you can focus on what matters most.</p>
+    <div class="hero-banner-badges">
+      <span class="hero-banner-badge">🏷 Patents Pending</span>
+      <a href="https://www.amazon.com/dp/B0GNVV2ZJ6" target="_blank" rel="noopener" class="hero-banner-badge-amazon">🛒 Buy on Amazon</a>
+      <span class="hero-banner-badge">✓ PT Endorsed</span>
+    </div>
+    <div class="hero-banner-ctas">
+      <a href="#products" class="hero-banner-btn">See the Products</a>
+      <a href="#wholesale" class="hero-banner-ghost">Wholesale Inquiries →</a>
+    </div>
+  </div>
+</div>
 
 <nav>
   <div class="nav-inner">
@@ -391,7 +508,7 @@ h1 span { color: var(--accent); }
         <div class="colors-label">Available in custom colors for your practice</div>
         <img src="colors.jpg" alt="SoftCrutch available in multiple colors" class="colors-img">
       </div>
-      <a href="mailto:paul@paulegone.com" class="btn-w">Request a Custom Quote →</a>
+      <a href="/cdn-cgi/l/email-protection#3a4a5b4f567a4a5b4f565f5d55545f14595557" class="btn-w">Request a Custom Quote →</a>
     </div>
   </div>
 
@@ -401,7 +518,7 @@ h1 span { color: var(--accent); }
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const crutch = document.querySelector('.crutch-bg');
   function updateParallax() {
     if (!crutch) return;
@@ -424,11 +541,3 @@ h1 span { color: var(--accent); }
         ticking = false;
       });
       ticking = true;
-    }
-  });
-  // Run on load and after images load
-  window.addEventListener('load', updateParallax);
-  updateParallax();
-</script>
-</body>
-</html>
