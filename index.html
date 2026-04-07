@@ -218,11 +218,13 @@ h1 span { color: var(--accent); }
   }
 }
 
-  /* Fix full-bleed on mobile for hero and wholesale */
+ /* Strong full-bleed fix for mobile - hero + wholesale */
 @media (max-width: 768px) {
-  #hero, .wholesale-section {
-    margin-left: -40px !important;
-    margin-right: -40px !important;
+  #hero,
+  .wholesale-section,
+  div[style*="PT_SoftCrutch.png"] {
+    margin-left: -9999px !important;
+    margin-right: -9999px !important;
   }
 }
 </style>
